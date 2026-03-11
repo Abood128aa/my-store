@@ -3,90 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>متجري الاحترافي | اطلب الآن</title>
+    <title>متجر كابيتانو - عرض الحسم الحصري</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Tajawal', sans-serif; }
+        body { font-family: 'Cairo', sans-serif; scroll-behavior: smooth; }
+        .gradient-bg { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); }
+        .btn-bounce { animation: bounce 2s infinite; }
+        @keyframes bounce { 0%, 20%, 50%, 80%, 100% {transform: translateY(0) translateX(-50%);} 40% {transform: translateY(-10px) translateX(-50%);} 60% {transform: translateY(-5px) translateX(-50%);} }
+        .sticky-order { position: fixed; bottom: 0; left: 0; right: 0; z-index: 100; background: white; padding: 10px; border-top: 1px solid #ddd; box-shadow: 0 -5px 15px rgba(0,0,0,0.1); }
     </style>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-50 pb-32">
 
-    <nav class="bg-white shadow-sm p-4 sticky top-0 z-50">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-blue-600">LOGO</h1>
-            <a href="#order" class="bg-orange-500 text-white px-6 py-2 rounded-full font-bold">اطلب الآن</a>
-        </div>
-    </nav>
+    <div class="bg-red-600 text-white text-center py-2 text-sm font-bold overflow-hidden">
+        <p class="animate-pulse">🔥 عرض محدود: خصم 40% ينتهي اليوم! التوصيل مجاني لفترة محدودة 🔥</p>
+    </div>
 
-    <section class="container mx-auto px-4 py-12 flex flex-col md:flex-row items-center">
-        <div class="md:w-1/2 text-right">
-            <h2 class="text-4xl font-bold text-gray-800 mb-4">اسم المنتج الرائع هنا</h2>
-            <p class="text-lg text-gray-600 mb-6">وصف مختصر ومغري للمنتج يشرح الفائدة الأساسية التي سيحصل عليها العميل فوراً.</p>
-            <div class="flex items-center gap-4 mb-8">
-                <span class="text-3xl font-bold text-orange-600">199 $</span>
-                <span class="text-xl text-gray-400 line-through">299 $</span>
-            </div>
-            <a href="#order" class="block text-center md:inline-block bg-blue-600 text-white px-10 py-4 rounded-lg text-xl font-bold shadow-lg hover:bg-blue-700 transition">سجل طلبك الآن</a>
-        </div>
-        <div class="md:w-1/2 mt-8 md:mt-0">
-            <img src="https://via.placeholder.com/500x500" alt="Product Image" class="rounded-2xl shadow-xl w-full">
-        </div>
-    </section>
+    <header class="bg-white py-4 shadow-sm text-center">
+        <h1 class="text-3xl font-black text-blue-800 tracking-tighter">KAPITANO <span class="text-orange-500">SHOP</span></h1>
+    </header>
 
-    <section class="bg-white py-16">
-        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div class="p-6 border rounded-xl">
-                <div class="text-4xl mb-4">🚚</div>
-                <h3 class="font-bold text-xl mb-2">توصيل سريع</h3>
-                <p>توصيل لجميع المحافظات خلال 48 ساعة.</p>
-            </div>
-            <div class="p-6 border rounded-xl">
-                <div class="text-4xl mb-4">💰</div>
-                <h3 class="font-bold text-xl mb-2">الدفع عند الاستلام</h3>
-                <p>لا تدفع شيئاً حتى تستلم منتجك وتفحصه.</p>
-            </div>
-            <div class="p-6 border rounded-xl">
-                <div class="text-4xl mb-4">⭐</div>
-                <h3 class="font-bold text-xl mb-2">جودة مضمونة</h3>
-                <p>ضمان استبدال واسترجاع لمدة 14 يوم.</p>
+    <section class="container mx-auto max-w-2xl mt-4 px-4">
+        <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
+            <img src="https://via.placeholder.com/800x800?text=Product+Image" alt="المنتج" class="w-full object-cover">
+            
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <span class="bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-xs font-bold">الأكثر مبيعاً ⭐</span>
+                    <div class="text-right">
+                        <span class="text-3xl font-black text-red-600">199 $</span>
+                        <span class="text-lg text-gray-400 line-through mr-2">350 $</span>
+                    </div>
+                </div>
+                <h2 class="text-2xl font-bold text-gray-800 leading-tight mb-4">اسم المنتج الذي تبحث عنه - الجودة الألمانية الأصلية</h2>
+                
+                <ul class="space-y-2 text-gray-600 text-sm">
+                    <li class="flex items-center gap-2"> ✅ جودة تصنيع عالية ومضمونة 100%.</li>
+                    <li class="flex items-center gap-2"> ✅ سهل الاستخدام ومناسب لجميع الأعمار.</li>
+                    <li class="flex items-center gap-2"> ✅ توصيل مجاني لباب البيت في سوريا ولبنان.</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <section id="order" class="py-20 bg-gray-100">
-        <div class="max-w-xl mx-auto px-4">
-            <div class="bg-white p-8 rounded-2xl shadow-2xl">
-                <h2 class="text-2xl font-bold text-center mb-8 text-gray-800">أدخل معلوماتك لإتمام الطلب</h2>
-                <form id="purchaseForm" class="space-y-4">
-                    <div>
-                        <label class="block text-gray-700 mb-2">الاسم الكامل</label>
-                        <input type="text" id="name" required class="w-full border p-3 rounded-lg focus:outline-blue-500">
-                    </div>
-                    <div>
-                        <label class="block text-gray-700 mb-2">رقم الهاتف</label>
-                        <input type="tel" id="phone" required class="w-full border p-3 rounded-lg focus:outline-blue-500">
-                    </div>
-                    <div>
-                        <label class="block text-gray-700 mb-2">العنوان بالتفصيل</label>
-                        <textarea id="address" required class="w-full border p-3 rounded-lg focus:outline-blue-500"></textarea>
-                    </div>
-                    <button type="submit" class="w-full bg-green-600 text-white py-4 rounded-lg text-xl font-bold shadow-lg hover:bg-green-700">تأكيد الطلب</button>
-                </form>
+    <section class="container mx-auto max-w-2xl px-4 mt-6">
+        <div class="gradient-bg text-white rounded-2xl p-4 text-center">
+            <p class="text-sm mb-2">ينتهي العرض الخاص خلال:</p>
+            <div class="flex justify-center gap-4 text-2xl font-black">
+                <div><span id="hours">02</span><p class="text-[10px] font-normal">ساعة</p></div> :
+                <div><span id="minutes">45</span><p class="text-[10px] font-normal">دقيقة</p></div> :
+                <div><span id="seconds">00</span><p class="text-[10px] font-normal">ثانية</p></div>
             </div>
         </div>
     </section>
 
-    <footer class="py-8 text-center text-gray-500 text-sm">
-        جميع الحقوق محفوظة © 2026
-    </footer>
+    <section class="container mx-auto max-w-2xl px-4 mt-8 grid grid-cols-3 gap-2">
+        <div class="bg-white p-3 rounded-xl text-center shadow-sm border">
+            <span class="text-xl">🚚</span>
+            <p class="text-[10px] font-bold mt-1">توصيل سريع</p>
+        </div>
+        <div class="bg-white p-3 rounded-xl text-center shadow-sm border border-blue-200">
+            <span class="text-xl">💳</span>
+            <p class="text-[10px] font-bold mt-1">دفع عند الاستلام</p>
+        </div>
+        <div class="bg-white p-3 rounded-xl text-center shadow-sm border">
+            <span class="text-xl">🛡️</span>
+            <p class="text-[10px] font-bold mt-1">ضمان تبديل</p>
+        </div>
+    </section>
+
+    <section id="order-form-section" class="container mx-auto max-w-2xl px-4 mt-10 mb-10">
+        <div class="bg-white p-6 rounded-3xl shadow-2xl border-4 border-blue-600">
+            <h3 class="text-2xl font-black text-center text-gray-800 mb-6">أدخل معلوماتك للطلب الآن</h3>
+            <form id="mainOrderForm" class="space-y-5">
+                <div>
+                    <input type="text" id="cust_name" required placeholder="الاسم الكامل" class="w-full bg-gray-50 border-2 border-gray-100 p-4 rounded-xl focus:border-blue-500 outline-none transition-all">
+                </div>
+                <div>
+                    <input type="tel" id="cust_phone" required placeholder="رقم الموبايل (واتساب)" class="w-full bg-gray-50 border-2 border-gray-100 p-4 rounded-xl focus:border-blue-500 outline-none transition-all text-left" dir="ltr">
+                </div>
+                <div>
+                    <select id="cust_city" class="w-full bg-gray-50 border-2 border-gray-100 p-4 rounded-xl focus:border-blue-500 outline-none appearance-none">
+                        <option value="">اختر المحافظة...</option>
+                        <option value="دمشق">دمشق</option>
+                        <option value="حلب">حلب</option>
+                        <option value="حماة">حماة</option>
+                        <option value="طرطوس">طرطوس</option>
+                        <option value="اللاذقية">اللاذقية</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full bg-orange-500 hover:bg-orange-600 text-white py-5 rounded-xl text-2xl font-black shadow-lg transform active:scale-95 transition-all">
+                    تأكيد طلب الشراء ✅
+                </button>
+            </form>
+            <p class="text-center text-gray-400 text-xs mt-4 italic">سيتم التواصل معك هاتفياً لتأكيد الطلب قبل الشحن</p>
+        </div>
+    </section>
+
+    <div class="sticky-order md:hidden">
+        <a href="#order-form-section" class="block w-full bg-blue-600 text-white text-center py-4 rounded-full font-bold shadow-2xl text-lg transition transform hover:scale-105 active:scale-95">
+            اشترِ الآن واحصل على الخصم 🛒
+        </a>
+    </div>
 
     <script>
-        // هنا سنضيف لاحقاً ربط Firebase أو GitHub API
-        document.getElementById('purchaseForm').onsubmit = (e) => {
+        // 1. كود عداد الوقت (Countdown)
+        function updateTimer() {
+            let h = document.getElementById('hours');
+            let m = document.getElementById('minutes');
+            let s = document.getElementById('seconds');
+            
+            let totalSeconds = (2 * 3600) + (45 * 60); // 2:45:00
+            
+            const timerInterval = setInterval(() => {
+                totalSeconds--;
+                let hrs = Math.floor(totalSeconds / 3600);
+                let mins = Math.floor((totalSeconds % 3600) / 60);
+                let secs = totalSeconds % 60;
+                
+                h.innerText = String(hrs).padStart(2, '0');
+                m.innerText = String(mins).padStart(2, '0');
+                s.innerText = String(secs).padStart(2, '0');
+                
+                if (totalSeconds <= 0) clearInterval(timerInterval);
+            }, 1000);
+        }
+        updateTimer();
+
+        // 2. كود إرسال الطلب (يمكنك ربطه بـ Telegram أو Firebase هنا)
+        document.getElementById('mainOrderForm').onsubmit = (e) => {
             e.preventDefault();
-            alert('شكراً لطلبك! سنتصل بك قريباً.');
+            const name = document.getElementById('cust_name').value;
+            const phone = document.getElementById('cust_phone').value;
+            const city = document.getElementById('cust_city').value;
+            
+            // تنبيه نجاح الطلب
+            alert(`شكراً يا ${name}! تم استلام طلبك من ${city} بنجاح. سنتصل بك على الرقم ${phone} قريباً.`);
+            e.target.reset();
         };
     </script>
 </body>
-              </html>
+</html>
